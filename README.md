@@ -1,12 +1,12 @@
 # AIDAdiffusion
-Concept Art/Prototyping faster with ourbunka internal tool AIDA (AIDAdiffusion), "All-In-one" app for running Stable Diffusion on windows PC locally, with easy to use web-based UI🎉, no cli need.
+Concept Art/Prototyping faster with ourbunka internal tool AIDA (AIDAdiffusion), "All-In-one" app for running Stable Diffusion on windows PC locally, with easy to use web-based UI🎉!
 
 Powered by Stable Diffusion V1-4.
 
 
 Requirement:
 
--modern gpu that support DirectML (Tested on AMD RX5700, newer nvidia & amd gpu should be supported too)
+-modern gpu with DirectML support (Tested on AMD RX5700, newer nvidia & amd gpu should be supported too)
 
 -10TFlops Fp32 or Higher for faster inferencing
 
