@@ -16,7 +16,7 @@ Requirement:
 
 -windows 10
 
--Python 3.10.7 installed
+-Python 3.10.7
 
 
 AIDA GUI : [ourbunka.github.io/aidadiffusion](https://ourbunka.github.io/aidadiffusion)
