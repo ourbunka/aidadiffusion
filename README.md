@@ -1,5 +1,5 @@
 # AIDAdiffusion
-Concept Art/Prototyping faster with ourbunka internal tool AIDA (AIDAdiffusion), an "All-In-one" app for running Stable Diffusion ML model on windows PC locally.
+Concept Art/Prototyping faster with ourbunka internal tool AIDA (AIDAdiffusion), "All-In-one" app for running Stable Diffusion on windows PC locally, with easy to use web-based UI🎉, no cli need.
 
 Powered by Stable Diffusion V1-4.
 
