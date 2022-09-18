@@ -19,5 +19,9 @@ Requirement:
 -Python 3.10.7 installed
 
 
+AIDA GUI : [ourbunka.github.io/aidadiffusion](https://ourbunka.github.io/aidadiffusion)
+*AIDA GUI required "AIDAdiffusion.exe" and "staticserver.exe" running in your local pc or cloud server to function properly
+
+
 BY USING AIDA(AIDADIFFUSION) APP, YOU ARE AGREEING WITH OURBUNKA MOTION AIDA(AIDADIFFUSION) TERMS OF SERVICES, LICENSE AND
 [STABLE DIFFUSION LICENSE](https://huggingface.co/spaces/CompVis/stable-diffusion-license).
