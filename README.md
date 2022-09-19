@@ -21,8 +21,10 @@ Requirement:
 -Python 3.10.7
 
 
-AIDA GUI : [ourbunka.github.io/aidadiffusion](https://ourbunka.github.io/aidadiffusion)
+[AIDA GUI github pages preview](https://ourbunka.github.io/aidadiffusion)
 *AIDA GUI required "AIDAdiffusion.exe" running in your local pc or cloud server to function properly
+*currently github pages version seem to have issues connecting with locally hosted AIDAdiffusion.exe(github pages seem to automatically convert http to https?),
+we recommend user to use locally hosted AIDA GUI [http://localhost:9998/files/build](http://localhost:9998/files/build) version.
 
 
 BY USING AIDA(AIDADIFFUSION) APP, YOU ARE AGREEING WITH OURBUNKA MOTION AIDA(AIDADIFFUSION) TERMS OF SERVICES, LICENSE AND
