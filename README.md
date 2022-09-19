@@ -29,3 +29,11 @@ BY USING AIDA(AIDADIFFUSION) APP, YOU ARE AGREEING WITH OURBUNKA MOTION AIDA(AID
 [STABLE DIFFUSION LICENSE](https://huggingface.co/spaces/CompVis/stable-diffusion-license).
 
 Download AIDA(AIDAdiffusion) [Latest release here.](https://github.com/ourbunka/aidadiffusion/releases/tag/V0.1.1-PB-wSD-P1) Also [available on Itch.io](https://ourbunka.itch.io/aida).
+
+
+# Credits
+We'd like to thanks authors, researchers and engineers of following repos for their research and implementations for making this app possible.
+-@compvis, Robin Rombach, Andreas Blattmann, Domninik Lorenz, Patrick Esser, Björn Ommer, Stablility AI and Runway works on stable-diffusion https://github.com/CompVis/stable-diffusion
+-@harishanand95's diffusers https://github.com/harishanand95/diffusers
+-@huggingface's diffusers https://github.com/huggingface/diffusers
+-@chakra-ui's chakra-ui https://github.com/chakra-ui/chakra-ui
