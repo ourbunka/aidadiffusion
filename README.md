@@ -3,6 +3,8 @@ Concept Art/Prototyping faster with ourbunka internal tool AIDA (AIDAdiffusion),
 
 Powered by Stable Diffusion V1-4.
 
+<img src="https://github.com/ourbunka/aidadiffusion/blob/main/AIDA.PNG?raw=true">
+
 
 Requirement:
 
