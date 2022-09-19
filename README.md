@@ -6,7 +6,7 @@ Powered by Stable Diffusion V1-4.
 <img src="https://github.com/ourbunka/aidadiffusion/blob/main/AIDA.PNG?raw=true">
 
 
-Requirement:
+# Requirements
 
 -modern gpu with DirectML support (Tested on AMD RX5700, newer nvidia & amd gpu should be supported too)
 
@@ -20,9 +20,12 @@ Requirement:
 
 -Python 3.10.7
 
+# Preview
 
 [AIDA GUI github pages preview](https://ourbunka.github.io/aidadiffusion)
+
 *AIDA GUI required "AIDAdiffusion.exe" running in your local pc or cloud server to function properly
+
 *currently github pages version seem to have issues connecting with locally hosted AIDAdiffusion.exe(github pages seem to automatically convert http to https?),
 we recommend user to use locally hosted AIDA GUI [http://localhost:9998/files/build](http://localhost:9998/files/build) version.
 
