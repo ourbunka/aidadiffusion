@@ -32,7 +32,7 @@ Download AIDA(AIDAdiffusion) [Latest release here.](https://github.com/ourbunka/
 
 
 # Credits
-We'd like to thanks authors, researchers and engineers of following repos for their research and implementations for making this app possible.
+We want to thanks authors, researchers and engineers of following repos for their research and implementations for making this app possible.
 -@compvis, Robin Rombach, Andreas Blattmann, Domninik Lorenz, Patrick Esser, Björn Ommer, Stablility AI and Runway works on stable-diffusion https://github.com/CompVis/stable-diffusion
 -@harishanand95's diffusers https://github.com/harishanand95/diffusers
 -@huggingface's diffusers https://github.com/huggingface/diffusers
