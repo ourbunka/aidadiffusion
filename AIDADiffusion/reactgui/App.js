@@ -7,14 +7,15 @@ import Home from './Components/Home';
 
 function App() {
   return (
-    
+  <>
   <ChakraProvider>
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename={process.env.PUBLIC_URL} >
     <Routes>
       <Route path="/" element={<Home/>}></Route>
     </Routes>
     </Router>
     </ChakraProvider>
+    </>
   );
 }
 
