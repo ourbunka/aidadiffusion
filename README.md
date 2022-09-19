@@ -28,4 +28,4 @@ AIDA GUI : [ourbunka.github.io/aidadiffusion](https://ourbunka.github.io/aidadif
 BY USING AIDA(AIDADIFFUSION) APP, YOU ARE AGREEING WITH OURBUNKA MOTION AIDA(AIDADIFFUSION) TERMS OF SERVICES, LICENSE AND
 [STABLE DIFFUSION LICENSE](https://huggingface.co/spaces/CompVis/stable-diffusion-license).
 
-[Download AIDA(AIDAdiffusion) Latest release here.](https://github.com/ourbunka/aidadiffusion/releases/tag/V0.1.1-PB-wSD-P1)
+Download AIDA(AIDAdiffusion) [Latest release here.](https://github.com/ourbunka/aidadiffusion/releases/tag/V0.1.1-PB-wSD-P1) Also [available on Itch.io](https://ourbunka.itch.io/aida).
