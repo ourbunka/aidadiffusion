@@ -1,0 +1,1 @@
+Git clone the stablediffusion-v-1-4 repo to this directory to fix dependency problem.

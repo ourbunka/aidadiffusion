@@ -1,4 +1,4 @@
-from dml_onnxfunc import onnxfunc
+from dml_onnxfunc2 import onnxfunc
 import sys
 
 
