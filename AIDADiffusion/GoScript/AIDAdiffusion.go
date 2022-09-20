@@ -15,16 +15,16 @@ type PromtData struct {
 }
 
 func main() {
+	//start browser
+	exec.Command("rundll32", "url.dll,FileProtocolHandler", "http://localhost:9998/files/build/").Start()
 	println("Starting AIDA UI & staticserver...")
+	//start static file server
 	startstaticserver()
-
+	//start AIDAdiffuser server
 	println("Starting AIDA server..")
 	//change working directory to examples/inference, required to run the stable diffusion model
 	os.Chdir("./diffusers/examples/inference")
 	startServer()
-
-	println("Go to http://localhost:9998/files/build/ in your webbrowser to start using the AIDA app!", "Optionally, use https://ourbunka.github.io/aidadiffusion for the GUI.")
-
 }
 
 func startstaticserver() {
