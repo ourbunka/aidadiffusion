@@ -38,6 +38,15 @@ BY USING AIDA(AIDADIFFUSION) APP, YOU ARE AGREEING WITH OURBUNKA MOTION AIDA(AID
 # Download
 Download AIDA(AIDAdiffusion) [Latest release here.](https://drive.google.com/file/d/1euC8uIzBq5D0mFpnncpb1CMoH1Mfyulz/view?usp=sharing) Also [available on Itch.io](https://ourbunka.itch.io/aida).
 
+# Dependency installation
+In AIDAdiffusion directory,
+
+"pip install transformers ftfy scipy torch diffusers"
+
+&
+
+"pip install ort_nightly_directml-1.13.0.dev20220915006-cp310-cp310-win_amd64.whl"
+
 
 # Credits
 We want to thanks authors, researchers and engineers of following repos for their research and implementations for making this app possible.
