@@ -31,10 +31,11 @@ Watch [vdeo Demo here.](https://www.youtube.com/watch?v=1lm7o4PX-rI)
 *currently github pages version seem to have issues connecting with locally hosted AIDAdiffusion.exe(github pages seem to automatically convert http to https?),
 we recommend using locally hosted AIDA GUI [http://localhost:9998/files/build.](http://localhost:9998/files/build)
 
-
+# ToS
 BY USING AIDA(AIDADIFFUSION) APP, YOU ARE AGREEING WITH OURBUNKA MOTION AIDA(AIDADIFFUSION) TERMS OF SERVICES, LICENSE AND
 [STABLE DIFFUSION LICENSE](https://huggingface.co/spaces/CompVis/stable-diffusion-license).
 
+# Download
 Download AIDA(AIDAdiffusion) [Latest release here.](https://github.com/ourbunka/aidadiffusion/releases/tag/V0.1.1-PB-wSD-P1) Also [available on Itch.io](https://ourbunka.itch.io/aida).
 
 
