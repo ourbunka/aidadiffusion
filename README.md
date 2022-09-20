@@ -36,7 +36,7 @@ BY USING AIDA(AIDADIFFUSION) APP, YOU ARE AGREEING WITH OURBUNKA MOTION AIDA(AID
 [STABLE DIFFUSION LICENSE](https://huggingface.co/spaces/CompVis/stable-diffusion-license).
 
 # Download
-Download AIDA(AIDAdiffusion) [Latest release here.](https://github.com/ourbunka/aidadiffusion/releases/tag/V0.1.1-PB-wSD-P1) Also [available on Itch.io](https://ourbunka.itch.io/aida).
+Download AIDA(AIDAdiffusion) [Latest release here.](https://drive.google.com/file/d/1euC8uIzBq5D0mFpnncpb1CMoH1Mfyulz/view?usp=sharing) Also [available on Itch.io](https://ourbunka.itch.io/aida).
 
 
 # Credits
