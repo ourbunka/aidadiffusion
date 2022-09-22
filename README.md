@@ -10,6 +10,8 @@ Powered by Stable Diffusion V1-4.
   
   -more tweakable parameters such as custom seed, scheduler/sampler, guidance_scale etc.
   
+  -new supported schedulers : LMS, DDIM,LMSD,PNDM
+  
   -all dependencies included (If you download V0.1.3-Prepack)
 
 
