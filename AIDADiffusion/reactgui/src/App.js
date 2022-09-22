@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { ColorModeSwitcher } from './Components/ColorswitchingComponent';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from './Components/Home';
+import HomeAdvance from './Components/Home_advance';
 
 function App() {
   return (
@@ -12,8 +13,16 @@ function App() {
     <Router basename={process.env.PUBLIC_URL} >
     <Routes>
       <Route path="/" element={<Home/>}></Route>
+      <Route path="/advance" element={<HomeAdvance/>}></Route>
     </Routes>
     </Router>
+    <footer>
+      <Center>
+        <Text fontSize="xs" fontWeight="bold" >AIDA DESIGNED BY 
+        <Link isExternal href="https://ourbunka.com"> OURBUNKA MOTION</Link>
+        </Text>
+      </Center>    
+    </footer>
     </ChakraProvider>
     </>
   );

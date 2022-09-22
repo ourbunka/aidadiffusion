@@ -2,8 +2,10 @@ import { ChakraProvider, Button, Box, Center, Input, Text,
     Grid, GridItem, Image, CircularProgress, Tooltip, Link,
     useDisclosure, Drawer, DrawerOverlay,DrawerContent,DrawerHeader,
     DrawerBody } from '@chakra-ui/react';
-  import { useEffect, useState } from 'react';
-  import { ColorModeSwitcher } from './ColorswitchingComponent';
+import { useEffect, useState } from 'react';
+import { ColorModeSwitcher } from './ColorswitchingComponent';
+import {Link as routerLink}  from 'react-router-dom'
+
   
   function Home() {
     const [promptInput, setpromptInput] = useState('');
@@ -26,7 +28,7 @@ import { ChakraProvider, Button, Box, Center, Input, Text,
     const { isOpen, onOpen, onClose } = useDisclosure()
   
     var thefilename = "http://"+serverIP+":9998/files/"+saveName+".jpg"
-    var postIP = "http://"+serverIP+":9999/test"
+    var postIP = "http://"+serverIP+":9999/standard"
   
     
   
@@ -98,7 +100,15 @@ import { ChakraProvider, Button, Box, Center, Input, Text,
           <Image borderRadius={"lg"} w="45px" src="https://ourbunka.com:3666/api/ourbunka_logo_4k-01.png"></Image>
         </Box>
       </Link>
-      <Button backgroundColor="#09092a" onClick={onOpen} zIndex="999" position="fixed" left="3%" bottom="3%" size={"sm"}><Text color={"pink.100"} fontSize={"xs"} fontWeight="bold">ToS & LICENSE</Text></Button>
+      <Box  zIndex="999" position="fixed" left="3%" bottom="3%">
+      <Center>
+      <Link as={routerLink} to="/advance" ><Tooltip label="Click to go to AIDA Advance Mode">
+        <Button backgroundColor="#09092a" size={"sm"}><Text color={"gray.200"} fontSize={"xs"} fontWeight="bold">Advance Mode</Text></Button>
+      </Tooltip>
+      </Link>
+      </Center>
+      <Button marginTop={"3px"} backgroundColor="#09092a" onClick={onOpen} zIndex="999" size={"sm"}><Text color={"pink.200"} fontSize={"xs"} fontWeight="bold">ToS & LICENSE</Text></Button>
+      </Box>
       <Box zIndex="999" position="fixed" right="1%" bottom="3%" w="200px">
       <Text fontSize={"10"} fontWeight="thin"><Tooltip hasArrow label="If you're having issue with loading generated images or GENERATE button is not working, replace the default value to your pc local IP address.">AIDAserver IP</Tooltip></Text><Input size="sm" w="80%" value={serverIP} onChange={handleserverIPInputChange} placeholder="localhost"></Input>
       <ColorModeSwitcher/>
