@@ -1,1 +1,2 @@
+If you gitclone this repo instead of download prepacked V0.1.3 release, you need to git clone stablediffusion-v-1-4 repo.
 Git clone the stablediffusion-v-1-4 repo to this directory to fix dependency problem.
