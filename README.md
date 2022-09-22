@@ -7,15 +7,15 @@ Powered by Stable Diffusion V1-4.
 
 # V0.1.3 New Features
   -new Advance mode UI
+  
   -more tweakable parameters such as custom seed, scheduler/sampler, guidance_scale etc.
+  
   -all dependencies included (If you download V0.1.3-Prepack)
 
 
 # Requirements
 
 -modern gpu with DirectML support (Tested on AMD RX5700, newer nvidia & amd gpu should be supported too)
-
--10TFlops Fp32 or Higher for faster inferencing
 
 -8GB of VRAM or more
 
