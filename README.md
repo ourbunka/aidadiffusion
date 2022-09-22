@@ -5,6 +5,11 @@ Powered by Stable Diffusion V1-4.
 
 <img src="https://github.com/ourbunka/aidadiffusion/blob/main/AIDA.PNG?raw=true">
 
+# V0.1.3 New Features
+  -new Advance mode UI
+  -more tweakable parameters such as custom seed, scheduler/sampler, guidance_scale etc.
+  -all dependencies included (If you download V0.1.3-Prepack)
+
 
 # Requirements
 
