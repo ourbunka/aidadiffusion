@@ -1,5 +1,6 @@
 V0.1.3
 
--embed all python dependency in release
--new AIDA UI subpages for advance user, more options such as seed, guidance, scale, sampler etc.
--new api for advance flag like -seed -guidance scale -sampler
+-embed all python dependency in release ✔
+-new AIDA UI subpages for advance user, more options such as seed, guidance, scale, sampler etc. ✔
+-new api for advance flag like -seed -guidance scale -sampler ✔
+
