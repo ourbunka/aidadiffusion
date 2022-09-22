@@ -1,24 +1,35 @@
 import { ChakraProvider, Button, Box, Center, Input, Text, 
     Grid, GridItem, Image, CircularProgress, Tooltip, Link,
     useDisclosure, Drawer, DrawerOverlay,DrawerContent,DrawerHeader,
-    DrawerBody } from '@chakra-ui/react';
-import { useEffect, useState } from 'react';
-import { ColorModeSwitcher } from './ColorswitchingComponent';
-import {Link as routerLink}  from 'react-router-dom'
-
+    DrawerBody, Container,IconButton,Icon, 
+    Radio, RadioGroup, Stack, AlertDialog} from '@chakra-ui/react';
+  import { useEffect, useState } from 'react';
+  import { ColorModeSwitcher } from './ColorswitchingComponent';
+  import Home from './Home';
+  import {Link as routerLink}  from 'react-router-dom'
+  import {BsDice5Fill} from 'react-icons/bs'
   
-  function Home() {
+  function HomeAdvance() {
     const [promptInput, setpromptInput] = useState('');
     const handlePromptInputChange = (event) => setpromptInput(event.target.value)
     const [iterationNums, setiterationNums] = useState("50");
     const handleIterationChange = (event) => setiterationNums(event.target.value)
     const [saveName, setsaveName] = useState("NewFileName_001");
     const handleNameChange = (event) => setsaveName(event.target.value)
-  
-    var jsonData = {
+    var [UserSeedInput, setUserSeedInput] = useState("5498549");
+    const handleSeedChange = (event) => setUserSeedInput(event.target.value)
+    const [userScheduler, setuserScheduler] = useState('lms')
+    console.log(userScheduler)
+    const [userGuidance, setUserGuidance] = useState("7.5")
+    const handleuserGuidanceChange = (event) => setUserGuidance(event.target.value)
+
+    var advancejsonData = {
       PromtString: promptInput,
       PromtIterations: iterationNums,
-      PromtSaveName: saveName
+      PromtSaveName: saveName,
+      PromtSeedInput: UserSeedInput,
+      PromtuserScheduler: userScheduler,
+      PromtuserGuidance: userGuidance,
     };
   
     
@@ -28,11 +39,23 @@ import {Link as routerLink}  from 'react-router-dom'
     const { isOpen, onOpen, onClose } = useDisclosure()
   
     var thefilename = "http://"+serverIP+":9998/files/"+saveName+".jpg"
-    var postIP = "http://"+serverIP+":9999/standard"
+    var postIP = "http://"+serverIP+":9999/advance"
   
-    
+    const seedDiceIcon = BsDice5Fill
   
+    function getRndInteger(min, max) {
+      return String(Math.floor(Math.random() * (max - min)) + min);
+    }
 
+    function generateRandomSeed() {
+      var value = getRndInteger(0,9999999)
+      //console.log(value)
+      //handleSeedChange
+      
+      console.log(value)
+      setUserSeedInput(UserSeedInput = value)
+      console.log("userseedinput"+UserSeedInput)
+    }
 
     function handleClick() {
       // Send data to the backend via POST
@@ -41,7 +64,8 @@ import {Link as routerLink}  from 'react-router-dom'
   
         method: "POST",
         mode: "cors",
-        body: JSON.stringify(jsonData) // body data type must match "Content-Type" header
+        body: JSON.stringify(advancejsonData) // body data type must match "Content-Type" header
+        
       });
     }
   
@@ -56,6 +80,9 @@ import {Link as routerLink}  from 'react-router-dom'
         <Box w="80%" h="150px">
         <Center>
         <Text marginTop="50px" fontWeight="bold" fontSize="6xl">AIDA</Text>
+        </Center>
+        <Center>
+        <Text marginTop="-15px" zIndex={9999} fontWeight="bold" fontSize="sm">Advance</Text>
         </Center>
         </Box></Center>
         <Center>
@@ -73,7 +100,7 @@ import {Link as routerLink}  from 'react-router-dom'
         </Center>
         
         <Center>
-          <Box w="80%" h="75px">
+          <Box w="80%" h="40px">
           <Center>
           <Box w="70px">
             <Text w="70px" textAlign={"right"} fontWeight="semibold" fontSize="xs">Iteration</Text>
@@ -94,6 +121,41 @@ import {Link as routerLink}  from 'react-router-dom'
           
           </Center>
           </Box>
+          
+        </Center>
+        <Center>
+          <Box w="80%" h="300px">
+            <Center>
+              <Box><Text w="35px"fontSize="xs" fontWeight="semibold">Seed</Text></Box>
+              <Box mt="6px">
+                <Tooltip label="Integer Only. Diffence Seed will generate difference images. Recommended to use random seed each time to get different result.">
+                  <Input value={UserSeedInput} onChange={handleSeedChange} w="160px" fontWeight="semibold" size="sm"></Input>
+                </Tooltip>
+                <Tooltip hasArrow label="Click to generate random Integer."><Button onClick={()=>(generateRandomSeed())} size="xs" margin="3px"><Icon as={BsDice5Fill}/></Button>
+                </Tooltip>
+              </Box>
+            </Center>
+            <Center>
+              <Box mt="13px"><Text w="60px"fontSize="xs" fontWeight="semibold">Scheduler</Text></Box>
+              <Box mt="13px">
+              <Tooltip label="Recommended to use default option, unless you know what you're doing. Some option might slow down speed of inferencing."><RadioGroup onChange={setuserScheduler} value={userScheduler}>
+                <Stack direction='row'>
+                <Radio size="sm" value='lms'>LMS</Radio>
+                <Radio size="sm" value='ddim'>DDIM</Radio>
+                <Radio size="sm" value='lmsd'>LMSD</Radio>
+                <Radio size="sm" value='pndm'>PNDM</Radio>
+                </Stack>
+                </RadioGroup>
+              </Tooltip>
+              </Box>
+            </Center>
+            <Center>
+            <Center>
+              <Box mt="13px"><Text w="100px"fontSize="xs" fontWeight="semibold">Guidance Scale</Text></Box>
+              <Box mt="13px"><Input onChange={handleuserGuidanceChange} value={userGuidance} w="100px" fontWeight="semibold" size="sm"></Input></Box>
+            </Center>
+            </Center>
+          </Box>
         </Center>
       <Link href="https://ourbunka.com">
         <Box  zIndex="999" position="fixed" top="3%" left="5%">
@@ -102,12 +164,12 @@ import {Link as routerLink}  from 'react-router-dom'
       </Link>
       <Box  zIndex="999" position="fixed" left="3%" bottom="3%">
       <Center>
-      <Link as={routerLink} to="/advance" ><Tooltip label="Click to go to AIDA Advance Mode">
-        <Button backgroundColor="#09092a" size={"sm"}><Text color={"gray.200"} fontSize={"xs"} fontWeight="bold">Advance Mode</Text></Button>
+      <Link as={routerLink} to="/" ><Tooltip label="Click to back to AIDA Standard Mode">
+        <Button backgroundColor="#09092a" size={"sm"}><Text color="gray.200" fontSize={"xs"} fontWeight="bold">Standard Mode</Text></Button>
       </Tooltip>
       </Link>
       </Center>
-      <Button marginTop={"3px"} backgroundColor="#09092a" onClick={onOpen} zIndex="999" size={"sm"}><Text color={"pink.200"} fontSize={"xs"} fontWeight="bold">ToS & LICENSE</Text></Button>
+      <Button marginTop={"3px"} backgroundColor="#09092a" onClick={onOpen} zIndex="999" size={"sm"}><Text color="pink.200" fontSize={"xs"} fontWeight="bold">ToS & LICENSE</Text></Button>
       </Box>
       <Box zIndex="999" position="fixed" right="1%" bottom="3%" w="200px">
       <Text fontSize={"10"} fontWeight="thin"><Tooltip hasArrow label="If you're having issue with loading generated images or GENERATE button is not working, replace the default value to your pc local IP address.">AIDAserver IP</Tooltip></Text><Input size="sm" w="80%" value={serverIP} onChange={handleserverIPInputChange} placeholder="localhost"></Input>
@@ -145,4 +207,4 @@ import {Link as routerLink}  from 'react-router-dom'
     );
   }
   
-  export default Home;
+  export default HomeAdvance;
