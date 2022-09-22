@@ -38,15 +38,22 @@ BY USING AIDA(AIDADIFFUSION) APP, YOU ARE AGREEING WITH OURBUNKA MOTION AIDA(AID
 # Download
 Download AIDA(AIDAdiffusion) [Latest release here.](https://drive.google.com/file/d/1euC8uIzBq5D0mFpnncpb1CMoH1Mfyulz/view?usp=sharing) Also [available on Itch.io](https://ourbunka.itch.io/aida).
 
-# Dependency installation
-In AIDAdiffusion directory,
+# V0.1.3 Dependency installation
+If you download Latest V0.1.3-PrePack releases, ignore this. All python, stablediffusion & onnx dependencies in included in the release.
 
-"pip install transformers ftfy scipy torch diffusers"
+If you gitclone this repo, you need to copy these python libraries into aidadiffusion/diffusers/examples/inference/vendor directory
+-diffusers
+-ftfy
+-numpy
+-onnxruntime
+-scipy
+-torch
+-tdm
+-transformers
 
-&
+you also need to accept stablediffusion license on huggingface, download stable-diffusion-v-1-4 repo. Then, copy to aidadiffusion/diffusers/examples/inference/ . After that, convert the pretrained model to onnx runtime by [following this guide](https://gitgudblog.vercel.app/posts/stable-diffusion-amd-win10)
 
-"pip install ort_nightly_directml-1.13.0.dev20220915006-cp310-cp310-win_amd64.whl"
-
+no huggingface token auth required after these step completed.
 
 # Credits
 We want to thanks authors, researchers and engineers of following repos for their research and implementations for making this app possible.
