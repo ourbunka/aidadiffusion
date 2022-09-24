@@ -58,7 +58,7 @@ If you gitclone this repo, you need to copy these python libraries into aidadiff
 -tqdm
 -transformers
 
-you also need to accept stablediffusion license on huggingface, download stable-diffusion-v-1-4 repo. Then, copy to aidadiffusion/diffusers/examples/inference/ . After that, go to aidadiffusion/diffusers/examples/inference/ in terminal, run "python save_onnx.py script" to convert the pretrained model to onnx runtime.
+you also need to accept stablediffusion license on huggingface, download stable-diffusion-v-1-4 repo. Then, copy to aidadiffusion/diffusers/examples/inference/ . After that, go to aidadiffusion/diffusers/examples/inference/ in terminal, run "python save_onnx.py" script to convert the pretrained model to onnx runtime.
 
 no huggingface token auth required after these step completed.
 
