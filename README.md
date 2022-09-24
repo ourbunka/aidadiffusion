@@ -55,7 +55,7 @@ If you gitclone this repo, you need to copy these python libraries into aidadiff
 -onnxruntime
 -scipy
 -torch
--tdm
+-tqdm
 -transformers
 
 you also need to accept stablediffusion license on huggingface, download stable-diffusion-v-1-4 repo. Then, copy to aidadiffusion/diffusers/examples/inference/ . After that, convert the pretrained model to onnx runtime by [following this guide](https://gitgudblog.vercel.app/posts/stable-diffusion-amd-win10)
