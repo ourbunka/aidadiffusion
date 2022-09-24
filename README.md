@@ -1,5 +1,7 @@
-#Cuda port of AIDA (AIDAdiffusion) Under Developments
-#Todo
+# Cuda port of AIDA (AIDAdiffusion)  AIDA-C
+Under Developments
+
+# Todo
 -port to cuda to support Nvidia GPUs
 -add img2img mode
 -add float16 mode
