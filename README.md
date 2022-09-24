@@ -1,3 +1,9 @@
+#Cuda port of AIDA (AIDAdiffusion) Under Developments
+#Todo
+-port to cuda to support Nvidia GPUs
+-add img2img mode
+-add float16 mode
+
 # AIDAdiffusion
 Concept Art/Prototyping faster with ourbunka internal tool AIDA (AIDAdiffusion), "All-In-one" app for running Stable Diffusion on windows PC locally, with easy to use web-based UI🎉!
 
