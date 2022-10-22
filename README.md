@@ -55,7 +55,7 @@ BY USING AIDA(AIDADIFFUSION) APP, YOU ARE AGREEING WITH OURBUNKA MOTION AIDA(AID
 coming soon
 
 # V0.1.4 Dependency installation
-If you download Latest V0.1.4-Portable releases, ignore this. All python, stablediffusion & onnx dependencies in included in the release.
+If you download Latest V0.1.4-Portable releases, ignore this. All python & stablediffusion dependencies in included in the release.
 
 If you gitclone this repo, you need to copy these python libraries into aidadiffusion/diffusers/examples/inference/vendor directory
 -diffusers
