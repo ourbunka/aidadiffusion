@@ -14,10 +14,14 @@ Powered by Stable Diffusion.
 
 # V0.1.4 New Features
   -updated to runwayml/stable diffusion v-1-5
+  
   -better and more realistic generated result
-  -cuda and cpu only(can't get stablediffusion v1.5 to run on onnxruntime)
+  
+  -cuda and cpu only(can't get stablediffusion v1.5 to run on onnxruntime, onnx version supports will be dropped, as here internally ourbunka will be switching to nvidia gpus/cuda workflows.)
+  
   -all dependencies included (If you download V0.1.4-Portable) *coming soon
-  -smaller filesizes
+  
+  -smaller overall filesizes
 
 # Requirements
 
@@ -36,7 +40,7 @@ Powered by Stable Diffusion.
 
 [AIDA GUI github pages preview](https://ourbunka.github.io/aidadiffusion)
 
-Watch [vdeo Demo here.](https://www.youtube.com/watch?v=1lm7o4PX-rI)
+Watch [v0.1.2 video Demo here.](https://www.youtube.com/watch?v=1lm7o4PX-rI)
 
 *AIDA GUI required "AIDAdiffusion.exe" running in your local pc or cloud server to function properly
 
@@ -62,7 +66,7 @@ If you gitclone this repo, you need to copy these python libraries into aidadiff
 -tdm
 -transformers
 
-you also need to accept stablediffusion license on huggingface, download stable-diffusion-v-1-5 repo. Then, copy to aidadiffusion/diffusers/examples/inference/ . After that, convert the pretrained model to onnx runtime by [following this guide](https://gitgudblog.vercel.app/posts/stable-diffusion-amd-win10)
+you also need to accept stablediffusion license on huggingface, download stable-diffusion-v-1-5 repo. Then, copy to aidadiffusion/diffusers/examples/inference/
 
 no huggingface token auth required after these step completed.
 
