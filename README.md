@@ -26,7 +26,7 @@ Powered by Stable Diffusion.
 # Requirements
 
 -nvidia gpu
--cpu is supported, but it will be significantly slower(16s/it on a 6core12threads ryzen 3600 vs ~1sec/it on a 10Teraflops gpu)
+-cpu is supported, but it will be significantly slower(16s/it on a 6core12threads ryzen 3600 vs ~1sec/it on a ~10Teraflops fp32 gpu)
 
 -8GB of VRAM or more
 
