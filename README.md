@@ -57,10 +57,12 @@ If you gitclone this repo, you need to copy these python libraries into aidadiff
 -numpy
 -scipy
 -torch
--tdm
+-tqdm
 -transformers
 
+
 you also need to accept stablediffusion license on huggingface, download stable-diffusion-v-1-5 repo. Then, copy to aidadiffusion/diffusers/examples/inference/
+
 
 no huggingface token auth required after these step completed.
 
