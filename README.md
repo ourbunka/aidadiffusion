@@ -1,10 +1,3 @@
-# Cuda port of AIDA (AIDAdiffusion)  AIDA-C
-Under Developments
-
-# Todo
--port to cuda to support Nvidia GPUs
--add float16 mode in ui
-
 # AIDAdiffusion
 Concept Art/Prototyping faster with ourbunka internal tool AIDA (AIDAdiffusion), "All-In-one" app for running Stable Diffusion on windows PC locally, with easy to use web-based UI🎉!
 
@@ -17,7 +10,7 @@ Powered by Stable Diffusion.
   
   -better and more realistic generated result
   
-  -cuda and cpu only(can't get stablediffusion v1.5 to run on onnxruntime, onnx version supports will be dropped, as here internally ourbunka will be switching to nvidia gpus/cuda workflows.)
+  -cuda and cpu only
   
   -all dependencies included (If you download V0.1.4-Portable) *coming soon
   
@@ -26,7 +19,8 @@ Powered by Stable Diffusion.
 # Requirements
 
 -nvidia gpu
--cpu is supported, but it will be significantly slower(16s/it on a 6core12threads ryzen 3600 vs ~1sec/it on a ~10Teraflops fp32 gpu)
+
+-cpu is supported, but it will be significantly slower (16s/it on a 6core12threads ryzen 3600 vs ~1sec/it on a ~10Teraflops fp32 gpu)
 
 -8GB of VRAM or more
 
@@ -69,6 +63,10 @@ If you gitclone this repo, you need to copy these python libraries into aidadiff
 you also need to accept stablediffusion license on huggingface, download stable-diffusion-v-1-5 repo. Then, copy to aidadiffusion/diffusers/examples/inference/
 
 no huggingface token auth required after these step completed.
+
+# Todo
+-add float16 mode in ui
+
 
 # Credits
 We want to thanks authors, researchers and engineers of following repos for their research and implementations for making this app possible.
