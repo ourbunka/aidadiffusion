@@ -13,6 +13,11 @@ sys.path.append(vendor_dir)
 # import torch  #pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu117 and then copy to vendor directory
 
 
+from diffusers.models import AutoencoderKL, UNet2DConditionModel
+from diffusers.pipeline_utils import DiffusionPipeline
+from diffusers.schedulers import DDIMScheduler, LMSDiscreteScheduler, PNDMScheduler
+
+
 def cudasdfunc(promtInput, iterationsNum, saveName ):
     torch.backends.cudnn.benchmark = True
     torch.backends.cuda.matmul.allow_tf32 = True
@@ -28,5 +33,5 @@ def cudasdfunc(promtInput, iterationsNum, saveName ):
 
     prompt = promtInput
     with torch.autocast("cuda"):
-        image = pipe(prompt, height=768, width=512, num_inference_steps=iterationsNum, guidance_scale=15, eta=0.0)["sample"][0]
+        image = pipe(prompt, height=512, width=512, num_inference_steps=iterationsNum, guidance_scale=15, eta=0.0)["sample"][0]
     image.save(saveName)
