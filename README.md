@@ -17,6 +17,8 @@ Powered by Stable Diffusion.
   -flexible resolution options in UI(128px to 768px)
   
   -all dependencies included (If you download V2-1-Portable)
+  
+  -Ada Lovelace/RTX40 series gpu supported
 
 # Requirements
 
