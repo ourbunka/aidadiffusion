@@ -50,7 +50,7 @@ also available on [itch.io](https://ourbunka.itch.io/aida)
 # V2-1 Dependency installation
 If you download Latest V2-1-Portable releases, ignore this. All python & stablediffusion dependencies in included in the release.
 
-If you gitclone this repo, you need to copy these python libraries into aidadiffusion/diffusers/examples/inference/vendor directory
+If you gitclone this repo, you need to copy these python libraries into aidadiffusion/diffusers/vendor directory
 -diffusers
 -torch ( pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu117)
 
