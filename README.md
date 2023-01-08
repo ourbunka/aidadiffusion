@@ -24,7 +24,7 @@ Powered by Stable Diffusion.
 
 -nvidia gpu
 
--8GB of VRAM or more (6gb may supported on 128px/256px, need testing)
+-8GB of VRAM or more
 
 -32GB of RAM or more 
 
@@ -55,7 +55,7 @@ If you gitclone this repo, you need to copy these python libraries into aidadiff
 -torch ( pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu117)
 
 
-you also need to accept stablediffusion license on huggingface, download stable-diffusion-v2-1 repo. Then, copy to aidadiffusion/diffusers/examples/inference/
+you also need to accept stablediffusion license on huggingface, download stable-diffusion-v2-1 repo. Then, copy to aidadiffusion/diffusers/
 
 
 no huggingface token auth required after these step completed.
