@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "GENERATE_SOURCEMAP=false && react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -38,9 +38,7 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ]
-  },
-
-  "homepage": "https://ourbunka.github.io/aidadiffusion"
-
+    ],
+    "homepage": "https://ourbunka.github.io/aidadiffusion/"
+  }
 }

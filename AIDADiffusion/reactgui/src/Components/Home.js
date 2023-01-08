@@ -1,7 +1,7 @@
 import { ChakraProvider, Button, Box, Center, Input, Text, 
     Grid, GridItem, Image, CircularProgress, Tooltip, Link,
     useDisclosure, Drawer, DrawerOverlay,DrawerContent,DrawerHeader,
-    DrawerBody } from '@chakra-ui/react';
+    DrawerBody, RadioGroup, Stack, Radio,  } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import { ColorModeSwitcher } from './ColorswitchingComponent';
 import {Link as routerLink}  from 'react-router-dom'
@@ -14,11 +14,16 @@ import {Link as routerLink}  from 'react-router-dom'
     const handleIterationChange = (event) => setiterationNums(event.target.value)
     const [saveName, setsaveName] = useState("NewFileName_001");
     const handleNameChange = (event) => setsaveName(event.target.value)
-  
+    const [inputWidth, setInputWidth] = useState("512")
+    const [inputHeight, setInputHeight] = useState("512")
+
+
     var jsonData = {
       PromtString: promptInput,
       PromtIterations: iterationNums,
-      PromtSaveName: saveName
+      PromtSaveName: saveName,
+      PromptWidth: inputWidth,
+      PromptHeight: inputHeight
     };
   
     
@@ -91,8 +96,44 @@ import {Link as routerLink}  from 'react-router-dom'
               <Input w="100px" value={saveName} onChange={handleNameChange}fontWeight="semibold" size="sm"></Input>
             </Tooltip>
           </Box>
-          
           </Center>
+          <Box>
+          <Center>
+              <Box mt="13px"><Text w="60px"fontSize="xs" fontWeight="semibold">Width</Text></Box>
+              <Box mt="13px">
+              <Tooltip label="Higher Image Resolution requires more gpu vram. 512px or higher might crash on low vram gpus."><RadioGroup onChange={setInputWidth} value={inputWidth}>
+                <Stack direction='row'>
+                <Radio size="sm" value='128'>128px</Radio>
+                <Radio size="sm" value='256'>256px</Radio>
+                <Radio size="sm" value='512'>512px</Radio>
+                <Radio size="sm" value='768'>768px</Radio>
+                </Stack>
+                </RadioGroup>
+              </Tooltip>
+              </Box>
+            </Center>
+            <Center>
+              <Box mt="13px"><Text w="60px"fontSize="xs" fontWeight="semibold">Height</Text></Box>
+              <Box mt="13px">
+              <Tooltip label="Higher Image Resolution requires more gpu vram. 512px or higher might crash on low vram gpus."><RadioGroup onChange={setInputHeight} value={inputHeight}>
+                <Stack direction='row'>
+                <Radio size="sm" value='128'>128px</Radio>
+                <Radio size="sm" value='256'>256px</Radio>
+                <Radio size="sm" value='512'>512px</Radio>
+                <Radio size="sm" value='768'>768px</Radio>
+                </Stack>
+                </RadioGroup>
+              </Tooltip>
+              </Box>
+            </Center>
+          </Box>
+          <Box marginTop={50}>
+            <Center>
+            <Text fontSize="xs" fontWeight="bold" >AIDA DESIGNED BY 
+            <Link isExternal href="https://ourbunka.com"> OURBUNKA MOTION</Link>
+            </Text>
+            </Center>    
+          </Box>
           </Box>
         </Center>
       <Link href="https://ourbunka.com">
@@ -123,7 +164,7 @@ import {Link as routerLink}  from 'react-router-dom'
           <DrawerBody>
           <Text color="gray.100" fontSize={"sm"} fontWeight="bold">BY USING AIDA(AIDADIFFUSION) APP, YOU ARE AGREEING WITH OURBUNKA MOTION AIDA(AIDADIFFUSION) <Tooltip hasArrow label="">
             TERMS OF SERVICES</Tooltip>, LICENSING AGREEMENTS AND 
-          <Text color="gray.100" color={"blue.200"}><Link isExternal href="https://huggingface.co/spaces/CompVis/stable-diffusion-license">STABLE DIFFUSION LICENSE.</Link></Text>POWERED BY STABLE DIFFUSION V1-4, UI DESIGNED BY 
+          <Text color="gray.100" color={"blue.200"}><Link isExternal href="https://huggingface.co/spaces/CompVis/stable-diffusion-license">STABLE DIFFUSION LICENSE.</Link></Text>POWERED BY STABLE DIFFUSION, UI DESIGNED BY 
           <Link isExternal href="https://ourbunka.com/"><Text color={"blue.200"}>OURBUNKA MOTION</Text></Link></Text>
           <Text color="gray.100" fontWeight={"light"} fontSize={"8"}>You agree not to use AIDA(AIDAdiffusion) app, Stable Diffusion Model or Derivatives of the App or Model:</Text>
           <Text color="gray.100" fontWeight={"light"} fontSize={"8"}>- In any way that violates any applicable national, federal, state, local or international law or regulation;</Text>

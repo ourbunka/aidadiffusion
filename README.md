@@ -5,14 +5,18 @@ Powered by Stable Diffusion.
 
 <img src="https://github.com/ourbunka/aidadiffusion/blob/main/AIDA.PNG?raw=true">
 
-# V0.1.4 New Features
-  -updated to runwayml/stable diffusion v-1-5
+# V2-1 
+  -updated to stable diffusion v2-1
   
   -better and more realistic generated result
   
-  -cuda and cpu only
+  -cuda only
   
-  -all dependencies included (If you download V0.1.4-Portable) *coming soon
+  -default to fp16, lower vram usage
+  
+  -flexible resolution options in UI(128px to 768px)
+  
+  -all dependencies included (If you download V2-1-Portable) *coming soon
   
   -smaller overall filesizes
 
@@ -20,15 +24,13 @@ Powered by Stable Diffusion.
 
 -nvidia gpu
 
--cpu is supported, but it will be significantly slower (16s/it on a 6core12threads ryzen 3600 vs ~1sec/it on a ~10Teraflops fp32 gpu)
-
--8GB of VRAM or more
+-8GB of VRAM or more (6gb may supported on 128px/256px, need testing)
 
 -32GB of RAM or more 
 
 -windows 10 or 11
 
--Python 3.10.7
+-Python 3.10.7 installed
 
 # Preview
 
@@ -36,10 +38,6 @@ Powered by Stable Diffusion.
 
 Watch [v0.1.2 video Demo here.](https://www.youtube.com/watch?v=1lm7o4PX-rI)
 
-*AIDA GUI required "AIDAdiffusion.exe" running in your local pc or cloud server to function properly
-
-*currently github pages version seem to have issues connecting with locally hosted AIDAdiffusion.exe(github pages seem to automatically convert http to https?),
-we recommend using locally hosted AIDA GUI [http://localhost:9998/files/build.](http://localhost:9998/files/build)
 
 # ToS
 BY USING AIDA(AIDADIFFUSION) APP, YOU ARE AGREEING WITH OURBUNKA MOTION AIDA(AIDADIFFUSION) TERMS OF SERVICES, LICENSE AND
@@ -48,26 +46,18 @@ BY USING AIDA(AIDADIFFUSION) APP, YOU ARE AGREEING WITH OURBUNKA MOTION AIDA(AID
 # Download
 coming soon
 
-# V0.1.4 Dependency installation
+# V2-1 Dependency installation
 If you download Latest V0.1.4-Portable releases, ignore this. All python & stablediffusion dependencies in included in the release.
 
 If you gitclone this repo, you need to copy these python libraries into aidadiffusion/diffusers/examples/inference/vendor directory
 -diffusers
--ftfy
--numpy
--scipy
--torch
--tqdm
--transformers
+-torch ( pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu117)
 
 
-you also need to accept stablediffusion license on huggingface, download stable-diffusion-v-1-5 repo. Then, copy to aidadiffusion/diffusers/examples/inference/
+you also need to accept stablediffusion license on huggingface, download stable-diffusion-v2-1 repo. Then, copy to aidadiffusion/diffusers/examples/inference/
 
 
 no huggingface token auth required after these step completed.
-
-# Todo
--add float16 mode in ui
 
 
 # Credits

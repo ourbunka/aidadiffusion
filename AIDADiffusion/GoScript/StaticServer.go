@@ -21,9 +21,9 @@ func main() {
 
 	// Create a route along /files that will serve contents from
 	// the ./data/ folder.]
-	os.Chdir("./diffusers/examples/")
+	//os.Chdir("./diffusers/")
 	workDir, _ := os.Getwd()
-	filesDir := http.Dir(filepath.Join(workDir, "inference"))
+	filesDir := http.Dir(filepath.Join(workDir, "diffusers"))
 	FileServer(r, "/files", filesDir)
 
 	http.ListenAndServe(":9998", r)

@@ -12,6 +12,8 @@ type PromtData struct {
 	PromtString     string
 	PromtIterations string
 	PromtSaveName   string
+	PromptWidth     string
+	PromptHeight    string
 }
 
 type advancePromtData struct {
@@ -21,6 +23,8 @@ type advancePromtData struct {
 	PromtSeedInput     string
 	PromtUserScheduler string
 	PromtUserGuidance  string
+	PromptWidth        string
+	PromptHeight       string
 }
 
 func main() {
@@ -32,7 +36,7 @@ func main() {
 	//start AIDAdiffuser server
 	println("Starting AIDA server..")
 	//change working directory to examples/inference, required to run the stable diffusion model
-	os.Chdir("./diffusers/examples/inference")
+	os.Chdir("./diffusers")
 	startServer()
 }
 
@@ -59,7 +63,7 @@ func PromptAPI(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	fmt.Println("PromptData: %+v", pD, err)
-	GenerateImage(pD.PromtString, pD.PromtIterations, pD.PromtSaveName)
+	GenerateImage(pD.PromtString, pD.PromtIterations, pD.PromtSaveName, pD.PromptWidth, pD.PromptHeight)
 
 }
 
@@ -71,7 +75,7 @@ func PromptAPIAdvance(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	fmt.Println("PromptData: %+v", apD, err)
-	GenerateImageAdvance(apD.PromtString, apD.PromtIterations, apD.PromtSaveName, apD.PromtSeedInput, apD.PromtUserScheduler, apD.PromtUserGuidance)
+	GenerateImageAdvance(apD.PromtString, apD.PromtIterations, apD.PromtSaveName, apD.PromtSeedInput, apD.PromtUserScheduler, apD.PromtUserGuidance, apD.PromptWidth, apD.PromptHeight)
 
 }
 
@@ -86,16 +90,16 @@ func PromptAPIAdvance(w http.ResponseWriter, r *http.Request) {
 // 	exec.Command("python", "scripttest.py", "a dog driving a super fast cyberpunk flying car while scrolling twitter", "1", "dogdrivingcar").Run()
 // }
 
-func GenerateImage(promtInput string, iterationNums string, saveName string) {
+func GenerateImage(promtInput string, iterationNums string, saveName string, inputWidth string, inputHeight string) {
 	//execute InferenceModel() when api triggered
 	println("Inferencing.... Please wait.")
-	exec.Command("python", "script.py", promtInput, iterationNums, saveName).Run()
+	exec.Command("python", "script_cuda.py", promtInput, iterationNums, saveName, inputWidth, inputHeight).Run()
 	println("Inference completed!🎉")
 }
 
-func GenerateImageAdvance(promtInput string, iterationNums string, saveName string, userSeedInput string, PromtUserScheduler string, PromtUserGuidance string) {
+func GenerateImageAdvance(promtInput string, iterationNums string, saveName string, userSeedInput string, PromtUserScheduler string, PromtUserGuidance string, inputWidth string, inputHeight string) {
 	//execute InferenceModel() when api triggered
 	println("Inferencing.... Please wait.")
-	exec.Command("python", "script_advance.py", promtInput, iterationNums, saveName, userSeedInput, PromtUserScheduler, PromtUserGuidance).Run()
+	exec.Command("python", "script_cudaadv.py", promtInput, iterationNums, saveName, userSeedInput, PromtUserScheduler, PromtUserGuidance, inputWidth, inputHeight).Run()
 	println("Inference completed!🎉")
 }
