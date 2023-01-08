@@ -16,9 +16,7 @@ Powered by Stable Diffusion.
   
   -flexible resolution options in UI(128px to 768px)
   
-  -all dependencies included (If you download V2-1-Portable) *coming soon
-  
-  -smaller overall filesizes
+  -all dependencies included (If you download V2-1-Portable)
 
 # Requirements
 
@@ -47,7 +45,7 @@ BY USING AIDA(AIDADIFFUSION) APP, YOU ARE AGREEING WITH OURBUNKA MOTION AIDA(AID
 coming soon
 
 # V2-1 Dependency installation
-If you download Latest V0.1.4-Portable releases, ignore this. All python & stablediffusion dependencies in included in the release.
+If you download Latest V2-1-Portable releases, ignore this. All python & stablediffusion dependencies in included in the release.
 
 If you gitclone this repo, you need to copy these python libraries into aidadiffusion/diffusers/examples/inference/vendor directory
 -diffusers
