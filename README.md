@@ -44,7 +44,8 @@ BY USING AIDA(AIDADIFFUSION) APP, YOU ARE AGREEING WITH OURBUNKA MOTION AIDA(AID
 [STABLE DIFFUSION LICENSE](https://huggingface.co/spaces/CompVis/stable-diffusion-license).
 
 # Download
-coming soon
+Download [here](https://drive.google.com/file/d/1yhdYxE57lHIB5-N-gQKv_Z9e_Yj2G4dw/view?usp=share_link)
+also available on [itch.io](https://ourbunka.itch.io/aida)
 
 # V2-1 Dependency installation
 If you download Latest V2-1-Portable releases, ignore this. All python & stablediffusion dependencies in included in the release.
