@@ -30,12 +30,8 @@ Powered by Stable Diffusion.
 Watch [v0.1.2 video Demo here.](https://www.youtube.com/watch?v=1lm7o4PX-rI)
 
 
-# ToS
-BY USING AIDA(AIDADIFFUSION) APP, YOU ARE AGREEING WITH OURBUNKA MOTION AIDA(AIDADIFFUSION) TERMS OF SERVICES, LICENSE AND
-[STABLE DIFFUSION LICENSE](https://huggingface.co/spaces/CompVis/stable-diffusion-license).
-
 # Download
-Download [here](https://drive.google.com/file/d/1yhdYxE57lHIB5-N-gQKv_Z9e_Yj2G4dw/view?usp=share_link)
+Download [here](https://drive.google.com/file/d/1v4wT6xbyvgHG11ke14ma1Q4e9794dcPI/view?usp=share_link)
 also available on [itch.io](https://ourbunka.itch.io/aida)
 
 # V2-1 Dependency installation
