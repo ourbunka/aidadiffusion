@@ -142,14 +142,12 @@ func testGenerateImage(prompt string) {
 }
 
 func GenerateImage(promtInput string, iterationNums string, saveName string, inputWidth string, inputHeight string) {
-	//execute InferenceModel() when api triggered
 	println("Inferencing.... Please wait.")
 	exec.Command("python", "script_cuda.py", promtInput, iterationNums, saveName, inputWidth, inputHeight).Run()
 	println("Inference completed!🎉")
 }
 
 func GenerateImageAdvance(promtInput string, iterationNums string, saveName string, userSeedInput string, PromtUserScheduler string, PromtUserGuidance string, inputWidth string, inputHeight string) {
-	//execute InferenceModel() when api triggered
 	println("Inferencing.... Please wait.")
 	exec.Command("python", "script_cudaadv.py", promtInput, iterationNums, saveName, userSeedInput, PromtUserScheduler, PromtUserGuidance, inputWidth, inputHeight).Run()
 	println("Inference completed!🎉")
