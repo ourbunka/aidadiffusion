@@ -6,8 +6,8 @@ experimental
 
 todo
 -fix fallback_img path
--add iteration num
--add img size settings
+-add iteration num✔
+-add img size settings✔
 -add advanced mode
 -add select img window for img2img
 -add img2img
