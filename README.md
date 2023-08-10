@@ -1,9 +1,13 @@
 # AIDAdiffusion
-Concept Art/Prototyping faster with ourbunka internal tool AIDA (AIDAdiffusion), "All-In-one" app for running Stable Diffusion on windows PC locally, with easy to use web-based UI!
+Prototyping faster faster AIDA (AIDAdiffusion), an app for running Stable Diffusion on windows PC locally, with easy to use native GUI and web-based UI!
 
-Powered by Stable Diffusion.
 
+AIDA-GO native GUI for aidadiffusion
+<img src="https://github.com/ourbunka/aidadiffusion/blob/V2-1-5-aida-go-gui/AIDADiffusion/GoScript/aida-go/v0.1.1_ui_preview.jpg?raw=true">
+
+web ui
 <img src="https://github.com/ourbunka/aidadiffusion/blob/main/AIDA.PNG?raw=true">
+
 
 # V2-1-2 
   -update to pytorch 2.0 cu118
